@@ -5,6 +5,8 @@
 \usepackage[colorlinks=true, 
             urlcolor=teal,
             linkcolor=darkgray]{hyperref}
+\usepackage{amsmath}
+\usepackage{siunitx}
 
 \title{Template and best practices for typesetting homework papers}
 \author{Vorname Nachname}
@@ -21,11 +23,11 @@
 \include{latexworkflow.tex}
 \include{ColorGuide.tex}
 \include{FormulaGuide.tex}
+\include{MapGuide.tex}
 \include{GraphGuide.tex}
 \include{TableGuide.tex}
 \include{CitationGuide.tex}
 \include{References.tex}
-\include{cartable}
 \include{todo.tex}
 
 \end{document}
