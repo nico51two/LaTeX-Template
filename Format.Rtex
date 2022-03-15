@@ -16,12 +16,12 @@ To keep a consistent look across all my documents I decided to only use "Kp-font
     \item it comes with a mono-spaced font that is necessary to display readable and properly formated programming code in a document
     \item it comes with matching glyphs for formulas and mathematical notation
 \end{enumerate}
-\subsection{Code blocks and in-line code}
-For now all code related content of this document will focus on code written in R. When describing e.g. a data analysis processing chain it can be necessary to use in-line code snippets. This can be done in \LaTeX using the \verb|verb| and \verb|verbatim| commands.
-Inserting a code block is done like this:
+\subsection{Mono-spaced font}
+For now all code related content of this document will focus on code written in R. When describing e.g. a data analysis processing chain it can be necessary to use mono-spaced code fragments. This can be done in \LaTeX using the \verb|verb| and \verb|verbatim| commands.
+Inserting a mono-spaced block is done like this:
 \begin{verbatim}
 # this is a comment
 example <- c(1,3,1,2)
 mean(example)
 \end{verbatim}
-Referring to a short R-package-specific command within the text body would be done like this: \verb|psych::pairs.panels()|. Notice that this does not produce any output. It's purely about the font. For information on how to create "literate programming" documents and include interpreted code into a document read the \hyperref[sec:wf]{workflow chapter}.
+Referring to a short R-package-specific command within the text body would be done like this: \verb|psych::pairs.panels()|. Notice that this does not produce any output. It's purely about the font. Information on how to create "literate programming" documents and include interpreted code into a document will at some point be added to the \hyperref[sec:wf]{workflow chapter}.
