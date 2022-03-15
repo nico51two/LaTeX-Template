@@ -1,0 +1,31 @@
+\section{\LaTeX Workflow}
+\label{sec:wf}
+\subsection{drafting and transfer to \LaTeX environment}
+rough outline of workflow for the whole writing process
+drafting (markdown) to  \LaTeX.
+
+\subsection{Knitr and tidyverse}
+Knitr blocks show compiled R code and its echoed output. Within the \LaTeX code put the R code in between \verb|<<>>=| and \verb|@| to produce a code chunk like this:
+
+<<echo=TRUE, cache=TRUE, highlight=TRUE>>=
+library(tidyverse)
+data <- as_tibble(mtcars) # show output in chunk
+head(data)
+@
+
+\noindent To create a pretty table in R and pipe it into a document use
+
+\noindent \verb|print(xtable(object, type = latex))|
+
+\noindent and export the table from R into the \LaTeX document directory.
+<<echo=TRUE, cache=TRUE, highlight=TRUE>>=
+library(tidyverse)
+library(xtable)
+data <- as_tibble(head(mtcars))
+print(xtable(data, type = "latex"), file = "cartable.tex")
+@
+\noindent When working with \textit{overleaf.com} just upload the \verb|.tex| file and insert in the document like so:
+\input{cartable.tex}
+
+\subsection{Version control}
+The document code is split up into individual \verb|.tex| and \verb|.Rtex| files which can be managed using GitHub and Overleaf. Check the \hyperref[sec:Int]{Intro section} for the links.

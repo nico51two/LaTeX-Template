@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{kpfonts}
+\usepackage{xcolor}
+\usepackage[colorlinks=true, 
+            urlcolor=teal,
+            linkcolor=darkgray]{hyperref}
+
+\title{Template and best practices for typesetting homework papers}
+\author{Vorname Nachname}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\include{Intro.tex}
+\include{Format.tex}
+\include{latexworkflow.tex}
+\include{ColorGuide.tex}
+\include{FormulaGuide.tex}
+\include{GraphGuide.tex}
+\include{TableGuide.tex}
+\include{CitationGuide.tex}
+\include{References.tex}
+\include{cartable}
+\include{todo.tex}
+
+\end{document}

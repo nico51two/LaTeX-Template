@@ -1,0 +1,7 @@
+\section{Color Schemes}
+Since I've decided to always use the same color schemes for visual consistency and for not having to make decisions during data processing it makes sense to stick to colorblind friendly ones.
+<<echo=TRUE, cache=TRUE>>=
+# demonstrate color blind friendly palette using RColorBrewer in R
+library(RColorBrewer)
+display.brewer.all(colorblindFriendly = T)
+@
