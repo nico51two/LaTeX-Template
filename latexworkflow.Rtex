@@ -1,16 +1,19 @@
 \section{\LaTeX Workflow}
 \label{sec:wf}
-\subsection{drafting and transfer to \LaTeX environment}
-rough outline of workflow for the whole writing process
-drafting (markdown) to  \LaTeX.
+\subsection{Drafting and transfer to \LaTeX environment}
+The actual writing is done in Notepad++ when working on large Text sections. Document code gets edited in overleaf from where I save and copy the changes over to GitHub. I use Rstudio to write and run R code. In the future I would like all the writing, coding, editing and version control to be done from within one IDE.
 
 \subsection{Knitr and tidyverse}
 Knitr blocks show compiled R code and its echoed output. Within the \LaTeX code put the R code in between \verb|<<>>=| and \verb|@| to produce a code chunk like this:
 
 <<echo=TRUE, cache=TRUE, highlight=TRUE>>=
+
 library(tidyverse)
+
 data <- as_tibble(mtcars) # show output in chunk
+
 head(data)
+
 @
 
 \noindent To create a pretty table in R and pipe it into a document use
@@ -19,12 +22,19 @@ head(data)
 
 \noindent and export the table from R into the \LaTeX document directory.
 <<echo=TRUE, cache=TRUE, highlight=TRUE>>=
+
 library(tidyverse)
+
 library(xtable)
+
 data <- as_tibble(head(mtcars))
+
 print(xtable(data, type = "latex"), file = "cartable.tex")
+
 @
+\pagebreak
 \noindent When working with \textit{overleaf.com} just upload the \verb|.tex| file and insert in the document like so:
+
 \input{cartable.tex}
 
 \subsection{Version control}
