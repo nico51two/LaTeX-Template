@@ -1,2 +1,21 @@
 \section{Formula Guide}
-small section on making numbered formulas and using symbols
+\subsection{Mathematical notation}
+The \verb|amsmath| package is used to write formulas and have them properly aligned. Formulas are written in blocks like this Mualem-van-Genuchten model of soil water content after as noted by (cite)
+
+\begin{equation}
+\vspace{1cm}
+\theta = \theta_r + \frac{\theta_s - \theta_r}{[1+(\alpha h)^n]^m}
+\end{equation}
+
+where $\theta$ is the volumetric water moisture content $[cm^3 \times cm^−3]$, $h$ is soil matrix potential, $\theta_r$ is residual water content $[cm^3 \times cm^−3]$, $\theta_s$ is the saturated water content of the soil $[cm^3 \times cm^−3]$, and $\alpha, n$ are the fitting shape parameters of the soil water holding curve and $m=1-1/n$ and $n>1$.
+
+\subsection{SI unit symbols}
+\noindent The package \verb|siunitx| is useful for writing SI unit symbols that require special glyphs that are not defined in UTF8.
+With that I can write the August–Roche–Magnus equation for saturation vapor pressure $\epsilon_s$
+
+\begin{equation}
+    \vspace{1cm}
+    \epsilon_s(T) = 6.1094 \exp{\frac{17.625T}{T+243.04}}
+\end{equation}
+
+where $\epsilon_s$ is in [hPa] and T is the temperature in \SI{}{\degreeCelsius}.
